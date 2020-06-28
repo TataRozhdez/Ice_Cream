@@ -1,0 +1,20 @@
+.StripyBlock {
+  background-color: #B4E7D5; 
+  width: 100vw;
+  height: 120vh;
+  z-index: 1;
+  position: relative;
+  .stripy-img {
+    height: 100vh;
+  }
+  img {
+    width: 100vw;
+    position: absolute;
+  }
+  p {
+    font-size: 5rem;
+    position: absolute;
+    bottom: 2.604vw;
+    left: 41%;
+  }
+}

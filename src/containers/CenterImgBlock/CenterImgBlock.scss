@@ -1,0 +1,63 @@
+@import '../../resources/fonts/fonts';
+@import '../../resources/variables.scss';
+
+.CenterImgBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  img {
+    max-width: 100vw;
+  }
+ 
+  &.icecreame-slide {
+    background-color: $home-pg-bck-color;
+    img {
+      width: 450px;
+    } 
+    & > .MyButton {
+      bottom: 190px;
+      position: relative;
+    } 
+  }
+
+  &.fruit-slide {
+    background-color: #B4E7D5;
+
+    & > .MyButton {
+      bottom: 16vw;
+      position: relative;
+    } 
+  }
+
+  &.candy-slide {
+    background-color: #FEBFB3;
+
+    & > .MyButton {
+      bottom: 16vw;
+      position: relative;
+    } 
+  }
+
+
+  .center-block-text {
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+  
+    .text-line-one {
+      font-size: 3.646vw;
+      line-height: 8.333vw;
+    }
+    .text-line-two {
+      font-size: 11vw;
+      line-height: 5.521vw;
+      font-family: "LuloClean";
+    }
+  }
+
+}

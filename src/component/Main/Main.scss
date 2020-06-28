@@ -1,0 +1,19 @@
+@import '../../resources/variables.scss';
+
+.main {
+  background-color: $home-pg-bck-color;
+}
+.chat-btn {
+  width: 100px;
+  height: 100px;
+  background-color: #2F2E2E;
+  border-radius: 50%;
+  border: none;
+  bottom: 60px;
+  right: 140px;
+  z-index: 10;
+  position: fixed;
+  img {
+    width: 72px;
+  }
+}

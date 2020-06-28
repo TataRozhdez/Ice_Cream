@@ -1,0 +1,74 @@
+@import '../../resources/variables.scss';
+@import '../../resources/fonts/fonts';
+
+.NavMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: $chief-text-color;
+  padding-top: 1.823vw;
+  &.home-page {
+    background-color: $home-pg-bck-color;
+  }
+
+  .link-menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    line-height: 1.302vw;
+    position: fixed;
+    left: 5.208vw;
+    z-index: 10;
+    
+    a {
+      text-transform: uppercase;    
+      color: $chief-text-color;
+      cursor: pointer;
+      margin-right: 1.8vw;
+
+      &:hover, &:active,
+      &.active {
+        color: #706D6D;
+        transition: color 0.4s ease 0s;
+      }
+    } 
+  }
+  img {
+    width: 40px;
+  }
+  .logo {
+    font-size: 3.750vw;
+    font-family: "BelindaRegular";
+    a {
+    color: $chief-text-color;
+    }
+  }
+  .social-links {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    right: 5.208vw;
+    .login {
+      font-size: 1rem;
+      border: none;
+      background: inherit;
+      display: flex;
+      align-items: center;
+      vertical-align: baseline;
+      cursor: pointer;
+      line-height: 1.4rem;
+      margin-right: 0.521vw;
+
+      span {
+        padding-top: 0;
+        padding-left: 1.042vw; 
+        padding-bottom: 3px;
+        font-size: 1.5rem;
+      }
+    }
+    a {
+      margin-left: 10px;
+    }
+  }
+}

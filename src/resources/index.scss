@@ -1,0 +1,30 @@
+@import './fonts/fonts';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "DinNeuzeitGrotesk", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: responsive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+a {
+  text-decoration: none;
+  cursor: default;
+}
