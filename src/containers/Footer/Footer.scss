@@ -1,17 +1,56 @@
+@import '../../resources/variables.scss';
+
 .Footer {
   color: #FFFFFF;
   background-color: #000000;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-gap: 85px 10px;
-  padding: 100px 0;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 4.167vw 10px;
+  padding: 5.208vw 0;
   width: 100vw;
+  @media (max-width: $sm-screen) {
+    grid-template-columns: auto !important; 
+    grid-template-rows: repeat(6, auto);
+    grid-gap: 4.167vw;
+    padding: 50px;
+    .foot-txt {
+      grid-column: 1;
+      h2 {
+        font-size: 4.5vw;
+      }
+      p {
+        font-size: 3.7vw;
+      }
+    }
+    .hours {
+      grid-row: 2;
+    }
+    form {
+      grid-column: 1;
+      h2 {
+        font-size: 4.5vw;
+      }
+    }
+    .foot-wix-link {
+      grid-column: 1;
+      grid-row: 5;
+    }
+    .logos {
+      grid-column: 1!important ;
+      grid-row: 4;
+    }
+  }
+
   h2 {
-    font-size: 3rem;
+    font-size: 2.5vw;
     margin-bottom: 1rem;
   }
   p {
-    font-size: 2rem;
+    font-size: 1.667vw;
+    @media (max-width: $sm-screen) {
+      font-size: 2.7vw;
+    }
   }
   a {
     color: #FFFFFF;
@@ -20,19 +59,25 @@
   input,
   button {
     width: 90%;
-    height: 65px;
-    border: 6px solid #E8E8E8;
+    height: 53px;
+    border: 3px solid #E8E8E8;
     color: #FFFFFF;
+    outline: none;
+    @media (max-width: $sm-screen) {
+      width: 70%;
+    }
   }
   input {
     margin-bottom: 18px;
     font-size: 1.354vw;
-    padding-top: 3px;
-    padding-left: 1.198vw;
+    padding: 3px 23px;
     background-color: #121111;
     &:hover {
-      border: 9px solid #E8E8E8;
-      padding: 0px 20px;
+      border: 5px solid #E8E8E8;
+      padding: 1px 21px;
+    }
+    @media (max-width: $sm-screen) {
+      font-size: 3.1vw;
     }
   }
   button {
@@ -42,21 +87,54 @@
       border: 6px solid #2F2E2E;
       background-color: #2F2E2E;
     }
+    @media (max-width: $sm-screen) {
+      font-size: 3.7vw;
+    }
   }
   .logos {
     grid-column: 4;
     display: flex;
     flex-direction: row;
-    height: 46px;
+    height: 30px;
     a {
       background-color: #FFFFFF;
-      padding: 9px 11px 7px;
+      padding: 5px 10px 7px;
       margin-right: 16px;
       border-radius: 50%;
     }
     img {
-      width: 24px;
-      height: 24px;
+      width: 21px;
+      height: 21px;
+    }
+  }
+  .chat-btn {
+    width: 4.8vw;
+    height: 4.3vw;
+    background-color: #2F2E2E;
+    border-radius: 50%;
+    border: 1px solid #2F2E2E;
+    bottom: 2.3vw;
+    right: 4.8vw;
+    z-index: 10;
+    position: fixed;
+    outline: none;
+    img {
+      width: 2.8vw;
+      @media (max-width: $sm-screen) {
+        width: 5.8vw;
+      }
+    }
+    &:hover {
+      transition-delay:0s;
+      transition-duration:0.4s;
+      transition-timing-function: ease;
+      box-shadow: 0 0 10px 1px #000000;
+    }
+    @media (max-width: $sm-screen) {
+      width: 12.8vw;
+      height: 11.3vw;
+      bottom: 3.3vw;
+      right: 6.8vw;
     }
   }
 }

@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Footer.scss'
+
 import InstaLogo from '../../resources/image/icons/inst_foot.svg'
 import FacebookLogo from '../../resources/image/icons/facebook_foot.svg'
 import TwitterLogo from '../../resources/image/icons/twitter_foot.svg'
 import FoursquareLogo from '../../resources/image/icons/foursquare_foot.svg'
-import { Link } from 'react-router-dom'
+import Chat from '../../resources/image/icons/chat1.png'
 
 const renderLogo = logos => {
   return logos.map((logo, index) => {
@@ -45,7 +47,7 @@ export default function Footer() {
           Tel: 123-456-7890
         </p>
       </div>
-      <div className="foot-txt">
+      <div className="foot-txt hours">
         <h2>HOURS</h2>
         <p>
           OPEN DAILY <br />
@@ -61,12 +63,18 @@ export default function Footer() {
         /> <br />
         <button>SUBSCRIBE</button>
       </form>
-      <div>
+      <div className="foot-wix-link">
         <p>©2023 by Gelato. Proudly created with <a href="https://www.wix.com/">Wix.com</a></p>
       </div>
       <div className="logos">
         {renderLogo(logos)}
       </div>
+      <button className="chat-btn">
+        <img
+          src={Chat}
+          alt="Chat"
+        />
+      </button>
     </div>
   )
 }

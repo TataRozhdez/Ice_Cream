@@ -1,20 +1,33 @@
+@import '../../resources/variables.scss';
+
 .StripyBlock {
   background-color: #B4E7D5; 
   width: 100vw;
   height: 120vh;
   z-index: 1;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
   .stripy-img {
+    width: 100vw;
     height: 100vh;
   }
   img {
     width: 100vw;
+    // max-height: 121vh;
     position: absolute;
+    overflow: hidden;
   }
   p {
-    font-size: 5rem;
+    font-size: 4.167vw;
     position: absolute;
     bottom: 2.604vw;
     left: 40.625vw;
+    color: #FFFFFF;
+    @media (max-width: $sm-screen) {
+      font-size: 8.2vw;
+      left: 31.625vw;
+    }
   }
 }

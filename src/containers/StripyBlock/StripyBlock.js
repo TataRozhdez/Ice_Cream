@@ -1,7 +1,8 @@
 import React from 'react'
 import './StripyBlock.scss'
-import StripyBck from '../../resources/image/stripyBck.webp'
-import Bck7 from '../../resources/image/bck7.webp'
+import StripyBck from '../../resources/image/stripyBck.png'
+import Bck7 from '../../resources/image/bck7.png'
+import Fade from 'react-reveal/Fade';
 
 export default function StripyBlock() {
   return (
@@ -16,7 +17,9 @@ export default function StripyBlock() {
         src={Bck7}
         alt="double tap"
       />
-      <p>#DOUBLE TAP</p>
+      <Fade top cascade>
+        <p>#DOUBLE TAP</p>
+      </Fade>
     </div>
   )
 }

@@ -1,37 +1,64 @@
 @import '../../resources/fonts/fonts'; 
+@import '../../resources/variables.scss';
 
 .SideImgBlock {
   display: flex;
   background-color: #ffffff;
   height: 100vh;
+  @media (max-width: $sm-screen) {
+    height: 200vh;
+  }
+
   &.left-img {
     flex-direction: row;
+    @media (max-width: $sm-screen) {
+      flex-direction: column-reverse;
+    }
   }
   &.right-img {
     flex-direction: row-reverse;
+    @media (max-width: $sm-screen) {
+      flex-direction: column-reverse;
+    }
   }
+
   img {
-    width: 50vw;
+    max-width: 50vw;
     height: 100vh;
+    @media (max-width: $sm-screen) {
+      max-width: 100vw;
+    }
   }
   .side-block-text {
-    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 5.208vw;
+    height: 100vh;
     .side-caption {
       font-size: 3.646vw;
+      @media (max-width: $sm-screen) {
+        font-size: 8.3vw;
+      }
     }
     .side-subtitle {
       font-family: "BelindaRegular";
       font-size: 2.917vw;
+      @media (max-width: $sm-screen) {
+        font-size: 6.17vw;
+      }
     }
     .side-base-txt {
       text-align: center;
       font-size: 2.083vw;
       margin: 2.604vw;
+      @media (max-width: $sm-screen) {
+        font-size: 5.3vw;
+      }
+    }
+    @media (max-width: $sm-screen) {
+      width: 100vw;
     }
   }
 }

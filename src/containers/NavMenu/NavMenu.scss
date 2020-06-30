@@ -8,19 +8,20 @@
   justify-content: center;
   color: $chief-text-color;
   padding-top: 1.823vw;
-  &.home-page {
-    background-color: $home-pg-bck-color;
+  transition: right .22s ease-in;
+
+  img {
+    width: 1.8vw;
   }
 
   .link-menu {
     display: flex;
     flex-direction: row;
-    font-size: 2rem;
-    line-height: 1.302vw;
+    font-size: 1.4vw;
+    line-height: 1.1vw;
     position: fixed;
-    left: 5.208vw;
-    z-index: 10;
-    
+    left: 5.1vw;
+    z-index: 10;  
     a {
       text-transform: uppercase;    
       color: $chief-text-color;
@@ -33,22 +34,32 @@
         transition: color 0.4s ease 0s;
       }
     } 
+    @media (max-width: $sm-screen) {
+      display: none;
+    }
   }
-  img {
-    width: 40px;
-  }
+// FIX ->
+  // &.open > .link-menu {
+  //   display: flex;
+    
+  // }
+
   .logo {
-    font-size: 3.750vw;
+    font-size: 2.8vw;
     font-family: "BelindaRegular";
     a {
     color: $chief-text-color;
     }
+    @media (max-width: $sm-screen) {
+      font-size: 7.45vw
+    }
   }
+
   .social-links {
     display: flex;
     position: fixed;
     z-index: 10;
-    right: 5.208vw;
+    right: 5.1vw;
     .login {
       font-size: 1rem;
       border: none;
@@ -59,16 +70,83 @@
       cursor: pointer;
       line-height: 1.4rem;
       margin-right: 0.521vw;
-
-      span {
+      .login-txt {
         padding-top: 0;
         padding-left: 1.042vw; 
         padding-bottom: 3px;
-        font-size: 1.5rem;
+        font-size: 1.1vw;
       }
     }
     a {
       margin-left: 10px;
     }
+    @media (max-width: $sm-screen) {
+      display: none;
+    }
+  }
+// FIX ->
+  // &.open .social-links {
+  //   display: flex;
+    
+  // }
+
+  .menu-btn {
+    position: relative;
+    left: 22.135vw;
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    width: 50px;
+    @media (max-width: $sm-screen) {
+      display: flex;
+    }
+
+    & span::before {
+      margin-top: -5px;
+    }
+    & span::after {
+      margin-top: 1px;
+    }
+    & span,
+    & span::before,
+    & span::after  {
+      position: absolute;
+      top: 30%; 
+      left: 50%; margin-left: -16.6px;
+      width: 33px;
+      height: 3px;
+      background-color: $chief-text-color;
+      border-radius: 2px;
+      transition: .7s;
+    }
+    & span::before {
+      content: '';
+      transform: translateY(12px);
+    }
+    & span::after {
+      content: '';
+      transform: translateY(-10px);
+    }
+  }
+
+  &.open .menu-btn { 
+    & span::before {
+      transform: rotate(90deg);
+      transition: .7s;
+      margin-top: -2px;
+    }
+    & span::after {
+      display: none;
+    }
+    & span {
+      transform: rotate(-45deg);
+      top: 50%;
+      transition: .7s;
+    }
+  }
+
+  @media (max-width: $sm-screen) {
+    background-color: #ffffff;
+    height: 15.3vw;
   }
 }

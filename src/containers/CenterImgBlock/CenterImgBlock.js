@@ -12,12 +12,13 @@ export default function CenterImgBlock(props) {
     <div 
       className={classes.join(' ')}
     >
-      <img src={props.image} alt="background" />
       <div className="center-block-text">
         <p className="text-line-one">{props.textLineOne}</p>
         <h1 className="text-line-two">{props.textLineTwo}</h1>
       </div> 
+      <img src={props.image} alt="background" />
       <MyButton 
+        to={props.path}
         classStyle="white"
         text={props.textBtn}
         exact={props.exactBtn}

@@ -14,7 +14,6 @@ const renderLinks = (links) => {
         <NavLink
           to={link.to}
           exact={link.exact}
-          // onClick={this.clickHandler}
         >
           {link.label}
         </NavLink>
@@ -55,14 +54,17 @@ export default function NavMenu(props) {
     {to: '#', label: instagram, alt: 'Instagram'}
   ]
 
-  const classes = [
-    'NavMenu',
-    props.backgroundColor
+  let cls = [
+    'NavMenu'
   ]
+
+  if (props.isOpen) {
+    cls.push('open')
+  } 
 
   return (
     <div 
-      className={classes.join(' ')}
+      className={cls.join(' ')}
     >
       <nav className="link-menu">
         {renderLinks(links)}
@@ -78,10 +80,16 @@ export default function NavMenu(props) {
               alt="user"
             />
           </div>
-          <span>Log In</span>
+          <span className="login-txt">Log In</span>
         </button>
         {renderIcons(icons)}
       </nav>
+      <div 
+        className="menu-btn"
+        onClick={props.onToggle}
+      >
+        <span></span>
+      </div>
     </div>
   )
 }
