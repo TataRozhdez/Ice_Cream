@@ -8,7 +8,7 @@
   justify-content: center;
   color: $chief-text-color;
   padding-top: 1.823vw;
-  transition: right .22s ease-in;
+  overflow: hidden;
 
   img {
     width: 1.8vw;
@@ -38,11 +38,41 @@
       display: none;
     }
   }
-// FIX ->
-  // &.open > .link-menu {
-  //   display: flex;
-    
-  // }
+
+  &.open > .link-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 82%;
+    left: 18%;
+    height: 100vh;
+    top: 0;
+    padding-top: 160px;
+    padding-left: 100px;
+    font-size: 4.4vw;
+    line-height: 6.1vw;
+    transition: all 1s ease 0s;
+    a:hover, a.active {
+      color: #BBA45B;
+      transition: color 0.4s ease 0s;
+    }
+  }
+
+  &.open > .social-links > .login {
+    display: flex; 
+    position: relative;
+    right: 50vw;
+    .login-txt {
+      font-size: 3.1vw;
+    }
+    img {
+      width: 2.8vw;
+    }
+    &:hover {
+      color: #BBA45B;
+      transition: color 0.4s ease 0s;
+    }
+  }
 
   .logo {
     font-size: 2.8vw;
@@ -60,6 +90,7 @@
     position: fixed;
     z-index: 10;
     right: 5.1vw;
+
     .login {
       font-size: 1rem;
       border: none;
@@ -70,42 +101,37 @@
       cursor: pointer;
       line-height: 1.4rem;
       margin-right: 0.521vw;
+
       .login-txt {
         padding-top: 0;
         padding-left: 1.042vw; 
         padding-bottom: 3px;
         font-size: 1.1vw;
       }
+
+      @media (max-width: $sm-screen) {
+        display: none;
+      }
     }
     a {
       margin-left: 10px;
-    }
-    @media (max-width: $sm-screen) {
-      display: none;
+      @media (max-width: $sm-screen) {
+        display: none;
+      }
     }
   }
-// FIX ->
-  // &.open .social-links {
-  //   display: flex;
-    
-  // }
 
   .menu-btn {
-    position: relative;
-    left: 22.135vw;
+    position: absolute;
+    right: 7.135vw;
     cursor: pointer;
     display: none;
     height: 50px;
     width: 50px;
+    transition: all .7s ease-in;
+    z-index: 11;
     @media (max-width: $sm-screen) {
       display: flex;
-    }
-
-    & span::before {
-      margin-top: -5px;
-    }
-    & span::after {
-      margin-top: 1px;
     }
     & span,
     & span::before,
@@ -117,15 +143,17 @@
       height: 3px;
       background-color: $chief-text-color;
       border-radius: 2px;
-      transition: .7s;
     }
     & span::before {
       content: '';
+      margin-top: -5px;
       transform: translateY(12px);
     }
     & span::after {
       content: '';
       transform: translateY(-10px);
+      margin-top: 1px;
+      transition: opacity .5s;
     }
   }
 
@@ -136,12 +164,11 @@
       margin-top: -2px;
     }
     & span::after {
-      display: none;
+      opacity: 0;
     }
     & span {
       transform: rotate(-45deg);
       top: 50%;
-      transition: .7s;
     }
   }
 

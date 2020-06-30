@@ -22,7 +22,12 @@ ol,
 body {
   margin: 0;
   padding: 0;
-  
+}
+body {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;

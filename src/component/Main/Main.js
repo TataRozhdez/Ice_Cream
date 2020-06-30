@@ -13,7 +13,7 @@ import Bck4 from '../../resources/image/bck4.png'
 import Bck5 from '../../resources/image/bck5.png'
 import Bck6 from '../../resources/image/bck6.png'
 
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal/Fade'
 
 export class Main extends Component {
   state = {
@@ -26,6 +26,12 @@ export class Main extends Component {
     })
   }
 
+  menuCloseHandler = () => {
+    this.setState({
+      menu: false
+    })
+  }
+
   render() {
     return (
       <>
@@ -33,6 +39,7 @@ export class Main extends Component {
         <NavMenu 
           onToggle={this.toggleMenuHandler}
           isOpen={this.state.menu}
+          onClose={this.menuCloseHandler}
         />
         <Fade>
           <CenterImgBlock 
@@ -43,6 +50,7 @@ export class Main extends Component {
             textBtn="Menu"
             path="/flavors"
             exactBtn={false}
+            paralax="disabled"
           />
           <SideImgBlock 
             imgPosition="left-img"

@@ -6,6 +6,7 @@ import facebook from '../../resources/image/icons/facebook.svg'
 import instagram from '../../resources/image/icons/instagram.svg'
 import twitter from '../../resources/image/icons/twitter.svg'
 import foursquare from '../../resources/image/icons/foursquare.png'
+import Backdrop from '../Backdrop/Backdrop'
 
 const renderLinks = (links) => {
   return links.map((link, index) => {
@@ -63,33 +64,37 @@ export default function NavMenu(props) {
   } 
 
   return (
-    <div 
-      className={cls.join(' ')}
-    >
-      <nav className="link-menu">
-        {renderLinks(links)}
-      </nav>
-      <div className="logo">
-        <Link to="/">Gelato</Link>
-      </div>
-      <nav className="social-links">
-        <button className="login">
-          <div>
-            <img
-              src={userSvg}
-              alt="user"
-            />
-          </div>
-          <span className="login-txt">Log In</span>
-        </button>
-        {renderIcons(icons)}
-      </nav>
+    <React.Fragment>
       <div 
-        className="menu-btn"
-        onClick={props.onToggle}
+        className={cls.join(' ')}
       >
-        <span></span>
+        <nav className="link-menu">
+          {renderLinks(links)}
+        </nav>
+        <div className="logo">
+          <Link to="/">Gelato</Link>
+        </div>
+        <nav className="social-links">
+          <button className="login">
+            <div>
+              <img
+                src={userSvg}
+                alt="user"
+              />
+            </div>
+            <span className="login-txt">Log In</span>
+          </button>
+          {renderIcons(icons)}
+        </nav>
+        <div 
+          className="menu-btn"
+          onClick={props.onToggle}
+        >
+          <span></span>
+        </div>
       </div>
-    </div>
+      {props.isOpen ? <Backdrop onClick={props.onClose}/> : null}
+    </React.Fragment>
+
   )
 }

@@ -12,8 +12,10 @@
   .stripy-img {
     width: 100vw;
     height: 100vh;
+    position: relative;
+    
   }
-  img {
+  .ice-img {
     width: 100vw;
     // max-height: 121vh;
     position: absolute;
@@ -24,7 +26,7 @@
     position: absolute;
     bottom: 2.604vw;
     left: 40.625vw;
-    color: #FFFFFF;
+    color: $chief-text-color;
     @media (max-width: $sm-screen) {
       font-size: 8.2vw;
       left: 31.625vw;
