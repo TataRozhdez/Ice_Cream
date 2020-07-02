@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Fade from 'react-reveal/Fade'
 import './Main.scss'
+
 import NavMenu from '../../containers/NavMenu/NavMenu'
 import CenterImgBlock from '../../containers/CenterImgBlock/CenterImgBlock'
 import SideImgBlock from '../../containers/SideImgBlock/SideImgBlock'
@@ -13,36 +15,13 @@ import Bck4 from '../../resources/image/bck4.png'
 import Bck5 from '../../resources/image/bck5.png'
 import Bck6 from '../../resources/image/bck6.png'
 
-import Fade from 'react-reveal/Fade'
-
-export class Main extends Component {
-  state = {
-    menu: false
-  }
-
-  toggleMenuHandler = () => {
-    this.setState({
-      menu: !this.state.menu
-    })
-  }
-
-  menuCloseHandler = () => {
-    this.setState({
-      menu: false
-    })
-  }
-
-  render() {
-    return (
-      <>
+export default function Main() {
+  return (
+    <>
       <div className="main">
-        <NavMenu 
-          onToggle={this.toggleMenuHandler}
-          isOpen={this.state.menu}
-          onClose={this.menuCloseHandler}
-        />
+        <NavMenu />
         <Fade>
-          <CenterImgBlock 
+          <CenterImgBlock
             backgroundColor="icecreame-slide"
             image={Bck1}
             textLineOne="HAND CRAFTED"
@@ -50,9 +29,8 @@ export class Main extends Component {
             textBtn="Menu"
             path="/flavors"
             exactBtn={false}
-            paralax="disabled"
           />
-          <SideImgBlock 
+          <SideImgBlock
             imgPosition="left-img"
             image={Bck2}
             sideCaption="OUR FLAVORS"
@@ -62,7 +40,7 @@ export class Main extends Component {
             path="/flavors"
             exactBtn={false}
           />
-          <CenterImgBlock 
+          <CenterImgBlock
             backgroundColor="fruit-slide"
             image={Bck3}
             textLineOne="ENJOY"
@@ -71,7 +49,7 @@ export class Main extends Component {
             path="/flavors"
             exactBtn={false}
           />
-          <SideImgBlock 
+          <SideImgBlock
             imgPosition="right-img"
             image={Bck4}
             sideCaption="OUR PLACE"
@@ -81,7 +59,7 @@ export class Main extends Component {
             path="/about"
             exactBtn={false}
           />
-          <CenterImgBlock 
+          <CenterImgBlock
             backgroundColor="candy-slide"
             image={Bck5}
             textLineOne="CATERING & MORE"
@@ -90,7 +68,7 @@ export class Main extends Component {
             path="/book-an-event"
             exactBtn={false}
           />
-          <SideImgBlock 
+          <SideImgBlock
             imgPosition="left-img"
             image={Bck6}
             sideCaption="DESSERTS"
@@ -104,9 +82,6 @@ export class Main extends Component {
         </Fade>
       </div>
       <Footer />
-      </>
-    )
-  }
+    </>
+  )
 }
-
-export default Main

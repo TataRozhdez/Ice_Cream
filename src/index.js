@@ -7,13 +7,13 @@ import {BrowserRouter} from 'react-router-dom'
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 const application = (
-  // <React.StrictMode>
+  <React.StrictMode>
     <ParallaxProvider>
       <BrowserRouter>
         <App />  
       </BrowserRouter> 
     </ParallaxProvider>
-  // </React.StrictMode>
+  </React.StrictMode>
 )
 
 ReactDOM.render(

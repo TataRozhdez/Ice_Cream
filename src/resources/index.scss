@@ -7,7 +7,6 @@
 html {
   font-family: "DinNeuzeitGrotesk", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  font-size: responsive;
 }
 
 h1,
@@ -24,7 +23,7 @@ body {
   padding: 0;
 }
 body {
-  perspective: 1px;
+  // perspective: 1px;
   transform-style: preserve-3d;
   overflow-y: scroll;
   overflow-x: hidden;

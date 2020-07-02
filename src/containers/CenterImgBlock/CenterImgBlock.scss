@@ -1,4 +1,3 @@
-@import '../../resources/fonts/fonts';
 @import '../../resources/variables.scss';
 
 .CenterImgBlock {
@@ -15,7 +14,6 @@
 
   img {
     max-width: 90vw;
-    max-height: 90vh;
     z-index: 3;
   }
  
@@ -45,8 +43,9 @@
     background-color: #B4E7D5; 
     img {
       position: relative;
+      width: 65vw;
       @media (max-width: $sm-screen) {
-        max-width: 80vw;
+        max-width: 90vw;
       }
     }
 
@@ -78,7 +77,9 @@
 
   &.candy-slide {
     background-color: #FEBFB3;
-
+    img {
+      width: 89vw;
+    }
     @media (max-width: $sm-screen) {
       height: 110vh;
       overflow: hidden;

@@ -1,0 +1,29 @@
+.About {
+  background-color: #C3A9D4;
+  .aboutTxtFragment {
+    background-color: #fff;
+    padding: 3.65vw 28.6vw;
+    text-align: center;
+    width: 100vw;
+    h2 {
+      font-size: 3.17vw;
+    }
+    span {
+      font-family: "BelindaRegular";
+      font-size: 2.917vw;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.4vw;
+      line-height: 32.6px;
+      letter-spacing: 0.01rem;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+  }
+  .paralax-about {
+    background: center / cover no-repeat url(../../resources/image/aboutImg.png);
+    background-attachment: fixed;
+    height: 36.5vh;
+  }
+}

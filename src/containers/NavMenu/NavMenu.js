@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './NavMenu.scss'
 import { NavLink, Link } from 'react-router-dom'
 import userSvg from '../../resources/image/icons/user.svg'
@@ -40,26 +40,41 @@ const renderIcons = (icons) => {
   })
 }
 
-export default function NavMenu(props) {
-  const links = [
-    {to: '/', label: 'Home', exact: true},
-    {to: '/flavors', label: 'Flavors', exact: false},
-    {to: '/book-an-event', label: 'Book an Event', exact: false},
-    {to: '/about', label: 'About', exact: false}
-  ]
+export class NavMenu extends Component {
+  state = {
+    menu: false,
+    links: [
+      {to: '/', label: 'Home', exact: true},
+      {to: '/flavors', label: 'Flavors', exact: false},
+      {to: '/book-an-event', label: 'Book an Event', exact: false},
+      {to: '/about', label: 'About', exact: false}
+    ],
+    icons: [
+      {to: '#', label: facebook, alt: 'Facebook'},
+      {to: '#', label: twitter, alt: 'Twitter'},
+      {to: '#', label: foursquare, alt: 'Foursquare'},
+      {to: '#', label: instagram, alt: 'Instagram'}
+    ]
+  }
 
-  const icons = [
-    {to: '#', label: facebook, alt: 'Facebook'},
-    {to: '#', label: twitter, alt: 'Twitter'},
-    {to: '#', label: foursquare, alt: 'Foursquare'},
-    {to: '#', label: instagram, alt: 'Instagram'}
-  ]
+  toggleMenuHandler = () => {
+    this.setState({
+      menu: !this.state.menu
+    })
+  }
 
-  let cls = [
-    'NavMenu'
-  ]
+  menuCloseHandler = () => {
+    this.setState({
+      menu: false
+    })
+  }
 
-  if (props.isOpen) {
+  render() {
+    const cls = [
+      'NavMenu'
+    ]
+
+  if (this.state.menu) {
     cls.push('open')
   } 
 
@@ -69,7 +84,7 @@ export default function NavMenu(props) {
         className={cls.join(' ')}
       >
         <nav className="link-menu">
-          {renderLinks(links)}
+          {renderLinks(this.state.links)}
         </nav>
         <div className="logo">
           <Link to="/">Gelato</Link>
@@ -84,17 +99,19 @@ export default function NavMenu(props) {
             </div>
             <span className="login-txt">Log In</span>
           </button>
-          {renderIcons(icons)}
+          {renderIcons(this.state.icons)}
         </nav>
         <div 
           className="menu-btn"
-          onClick={props.onToggle}
+          onClick={this.toggleMenuHandler}
         >
           <span></span>
         </div>
       </div>
-      {props.isOpen ? <Backdrop onClick={props.onClose}/> : null}
+      {this.state.menu ? <Backdrop onClick={this.menuCloseHandler}/> : null}
     </React.Fragment>
-
-  )
+    )
+  }
 }
+
+export default NavMenu

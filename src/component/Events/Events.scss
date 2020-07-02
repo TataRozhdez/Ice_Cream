@@ -1,0 +1,41 @@
+.Events {
+  background-color: #FEBFB3;
+  .eventFragment {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 3.65vw 20.6vw;
+    text-align: center;
+    .eventTxt {
+      width: 50vw;
+      text-align: center;
+      h2 {
+        font-size: 3.17vw;
+      }
+      span {
+        font-family: "BelindaRegular";
+        font-size: 2.917vw;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.4vw;
+        line-height: 32.6px;
+        letter-spacing: 0.01rem;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+    }
+
+    
+  }
+  .booking-event {
+    background-color: #FEBFB3;
+    width: 60vw;
+    height: 20vh;
+  }
+  .paralax-about {
+    background: center / cover no-repeat url(../../resources/image/eventRg.png);
+    background-attachment: fixed;
+    height: 100vh;
+  }
+}

@@ -1,0 +1,24 @@
+.TextCenterBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 60vh;
+  flex-direction: column;
+  color: #ffffff;
+  &.AboutPg {
+    background-color: #C3A9D4;
+  }
+  &.EventsPg {
+    background-color: #FEBFB3;
+  }
+  .txtLineFirst {
+    font-size: 4.115vw;
+  }
+  .txtLineSecond {
+    font-size: 12.1vw;
+    line-height: 12vw;
+    font-family: "LuloClean";
+  }
+}
+
