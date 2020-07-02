@@ -5,7 +5,7 @@ import NavMenu from "../../containers/NavMenu/NavMenu"
 import Footer from "../../containers/Footer/Footer"
 import TextCenterBlock from "../../containers/TextCenterBlock/TextCenterBlock"
 import { Link } from "react-router-dom"
-import Backdrop from "../../containers/Backdrop/Backdrop"
+import ErrorWindow from "../../containers/ErrorWindow/ErrorWindow"
 
 export class Events extends Component {
   state = {
@@ -13,6 +13,7 @@ export class Events extends Component {
   }
 
   toggleErrorMsg = () => {
+    console.log(this.state)
     this.setState({
       errorMsg: !this.state.errorMsg,
     })
@@ -25,13 +26,6 @@ export class Events extends Component {
   }
 
   render() {
-    const cls = [
-      'error-window'
-    ]
-    if (this.state.errorMsg) {
-      cls.push('isOpen')
-    } 
-
     return (
       <React.Fragment>
       <div className="Events">
@@ -61,7 +55,10 @@ export class Events extends Component {
               </Link>
               <p>4 hr</p>
               <p>$200</p>
-              <button className="btn-book-event" onClick={this.toggleErrorMsg}>
+              <button 
+                className="btn-book-event" 
+                onClick={this.toggleErrorMsg}
+              >
                 BOOK NOW
               </button>
             </div>
@@ -70,19 +67,14 @@ export class Events extends Component {
         <div className="paralax-about" />
         <Footer />
       </div>
-      <div className={cls.join(' ')}> 
-        <div className="error-window-txt">
-          <span onClick={this.errorCloseHandler}>&#215;</span>
-          <p>
-            Sorry, this service is not yet available for online bookings. Please
-            contact us for more information.
-          </p>
-          <button className="btn-book-event" onClick={this.toggleErrorMsg}>
-            Got it
-          </button>
-        </div>
-      </div>
-     {this.state.errorMsg ? <Backdrop onClick={this.errorCloseHandler} /> : null} 
+      {
+        this.state.errorMsg 
+        ? <ErrorWindow 
+            isOpen={this.state.errorMsg}
+            onClose={this.errorCloseHandler}
+          /> 
+        : null
+      }
       </React.Fragment>
     )
   }

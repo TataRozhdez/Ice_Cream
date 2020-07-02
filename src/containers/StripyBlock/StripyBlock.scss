@@ -9,24 +9,32 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  .parallax-inner {
+    margin: 0;
+  }
   .stripy-img {
-    width: 100vw;
-    height: 100vh;
+    width: 200vw;
+    height: 140vh;
     position: relative;
-    
   }
   .ice-img {
     width: 100vw;
-    // max-height: 121vh;
     position: absolute;
     overflow: hidden;
   }
   p {
-    font-size: 4.167vw;
+    font-size: 6.167vw;
     position: absolute;
     bottom: 2.604vw;
-    left: 40.625vw;
+    left: 36.625vw;
     color: $chief-text-color;
+    text-shadow: 
+    1px 0px 1px #fff, 0px 1px 1px #eee, 
+    2px 1px 1px #fff, 1px 2px 1px #eee,
+    3px 2px 1px #fff, 2px 3px 1px #eee,
+    4px 3px 1px #fff, 3px 4px 1px #eee,
+    5px 4px 1px #fff, 4px 5px 1px #eee;
+
     @media (max-width: $sm-screen) {
       font-size: 8.2vw;
       left: 31.625vw;

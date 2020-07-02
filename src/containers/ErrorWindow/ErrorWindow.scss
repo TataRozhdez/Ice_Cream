@@ -1,0 +1,51 @@
+@import '../../resources/variables.scss';
+
+.error-window {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, .7);
+  z-index: 11;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  &.isOpen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .error-window-txt {
+    width: 42.708vw;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2.448vw 5.21vw 4.53vw;
+    position: relative;
+    span {
+      font-size: 2.344vw;
+      position: absolute;
+      right: 8%;
+      opacity: .4;
+    }
+    p {
+      font-size: 1.719vw;
+      padding: 10px;
+      padding: 4.688vw 0 1.04vw;
+    }
+  }
+  .btn-book-event {
+    margin-top: 1.083vw;
+    border: none;
+    cursor: pointer;
+    background-color: $chief-text-color;
+    color: #ffffff;
+    font-size: 26px;
+    padding: 4px 30px;
+    &:hover {
+      opacity: .4;
+      transition: opacity .3s;
+    }
+    &:active {
+      border: none;
+    }
+  }
+}

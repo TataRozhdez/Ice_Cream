@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade'
 import { Parallax } from 'react-scroll-parallax'
 
 const ParallaxImage = () => (
-  <Parallax className="custom-class" y={[-50, 50]} tagOuter="figure">
+  <Parallax className="custom-class" x={[-20, 20]} tagInner="figure">
     <img className="stripy-img" src={StripyBck} alt="background" />
   </Parallax>
 )
@@ -15,11 +15,6 @@ export default function StripyBlock() {
   return (
     <div className="StripyBlock">
       {ParallaxImage()}
-      {/* <img 
-        className="stripy-img"
-        src={StripyBck}
-        alt="Stripy"
-      /> */}
       <img 
         className="ice-img"
         src={Bck7}

@@ -54,41 +54,6 @@
       font-size: 33px;
       padding-top: 5px;
     }
-
-
-  }
-  .error-window {
-    display: none;
-    position: fixed;
-    background: rgba(0, 0, 0, .7);
-    z-index: 11;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    &.isOpen {
-      display: flex;
-    }
-    .error-window-txt {
-      width: 42.708vw;
-      background-color: #ffffff;
-      text-align: center;
-      top: 34vh;
-      position: relative;
-      left: 30vw;
-      padding: 2.448vw 5.21vw 4.53vw;
-      span {
-        font-size: 2.344vw;
-        position: absolute;
-        right: 8%;
-        opacity: .4;
-      }
-      p {
-        font-size: 1.719vw;
-        padding: 10px;
-        padding: 4.688vw 0 1.04vw;
-      }
-    }
   }
   .btn-book-event {
     margin-top: 1.083vw;

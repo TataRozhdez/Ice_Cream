@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
+import NavMenu from '../../containers/NavMenu/NavMenu'
 
-export default class Flavors extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Flavors</h1>
-      </div>
-    )
-  }
+export default function Flavors() {
+  return (
+    <div className="Flavors">
+      <NavMenu />
+    </div>
+  )
 }
