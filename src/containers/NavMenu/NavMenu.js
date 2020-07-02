@@ -74,42 +74,41 @@ export class NavMenu extends Component {
       'NavMenu'
     ]
 
-  if (this.state.menu) {
-    cls.push('open')
-  } 
-
-  return (
-    <React.Fragment>
-      <div 
-        className={cls.join(' ')}
-      >
-        <nav className="link-menu">
-          {renderLinks(this.state.links)}
-        </nav>
-        <div className="logo">
-          <Link to="/">Gelato</Link>
-        </div>
-        <nav className="social-links">
-          <button className="login">
-            <div>
-              <img
-                src={userSvg}
-                alt="user"
-              />
-            </div>
-            <span className="login-txt">Log In</span>
-          </button>
-          {renderIcons(this.state.icons)}
-        </nav>
+    if (this.state.menu) {
+      cls.push('open')
+    } 
+    return (
+      <React.Fragment>
         <div 
-          className="menu-btn"
-          onClick={this.toggleMenuHandler}
+          className={cls.join(' ')}
         >
-          <span></span>
+          <nav className="link-menu">
+            {renderLinks(this.state.links)}
+          </nav>
+          <div className="logo">
+            <Link to="/">Gelato</Link>
+          </div>
+          <nav className="social-links">
+            <button className="login">
+              <div>
+                <img
+                  src={userSvg}
+                  alt="user"
+                />
+              </div>
+              <span className="login-txt">Log In</span>
+            </button>
+            {renderIcons(this.state.icons)}
+          </nav>
+          <div 
+            className="menu-btn"
+            onClick={this.toggleMenuHandler}
+          >
+            <span></span>
+          </div>
         </div>
-      </div>
-      {this.state.menu ? <Backdrop onClick={this.menuCloseHandler}/> : null}
-    </React.Fragment>
+        {this.state.menu ? <Backdrop onClick={this.menuCloseHandler}/> : null}
+      </React.Fragment>
     )
   }
 }

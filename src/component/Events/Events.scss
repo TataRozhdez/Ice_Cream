@@ -1,16 +1,21 @@
+@import '../../resources/variables.scss';
+
 .Events {
   background-color: #FEBFB3;
+  position: relative;
   .eventFragment {
     width: 100vw;
     height: 100vh;
     background-color: #ffffff;
-    padding: 3.65vw 20.6vw;
+    padding: 3.65vw 0;
     text-align: center;
     .eventTxt {
       width: 50vw;
+      padding-top: 7.813vw;
+      margin: 0 auto;
       text-align: center;
       h2 {
-        font-size: 3.17vw;
+        font-size: 4.17vw;
       }
       span {
         font-family: "BelindaRegular";
@@ -18,20 +23,88 @@
         margin-bottom: 20px;
       }
       p {
-        font-size: 1.4vw;
+        font-size: 1.8vw;
         line-height: 32.6px;
         letter-spacing: 0.01rem;
-        margin-top: 50px;
+        margin-top: 2.6vw;
         margin-bottom: 20px;
       }
     }
-
     
   }
   .booking-event {
     background-color: #FEBFB3;
     width: 60vw;
-    height: 20vh;
+    padding: 2.6vw 0;
+    margin: 2.6vw auto;
+    a {
+      width: 100%;
+      cursor: pointer;
+      color: $chief-text-color;
+      h3 {
+        font-size: 40px;
+        margin-bottom: .8vw;
+        &:hover {
+          opacity: .4;
+          transition: opacity .3s;
+        }
+      }
+    }
+    p {
+      font-size: 33px;
+      padding-top: 5px;
+    }
+
+
+  }
+  .error-window {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, .7);
+    z-index: 11;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    &.isOpen {
+      display: flex;
+    }
+    .error-window-txt {
+      width: 42.708vw;
+      background-color: #ffffff;
+      text-align: center;
+      top: 34vh;
+      position: relative;
+      left: 30vw;
+      padding: 2.448vw 5.21vw 4.53vw;
+      span {
+        font-size: 2.344vw;
+        position: absolute;
+        right: 8%;
+        opacity: .4;
+      }
+      p {
+        font-size: 1.719vw;
+        padding: 10px;
+        padding: 4.688vw 0 1.04vw;
+      }
+    }
+  }
+  .btn-book-event {
+    margin-top: 1.083vw;
+    border: none;
+    cursor: pointer;
+    background-color: $chief-text-color;
+    color: #ffffff;
+    font-size: 26px;
+    padding: 4px 30px;
+    &:hover {
+      opacity: .4;
+      transition: opacity .3s;
+    }
+    &:active {
+      border: none;
+    }
   }
   .paralax-about {
     background: center / cover no-repeat url(../../resources/image/eventRg.png);
