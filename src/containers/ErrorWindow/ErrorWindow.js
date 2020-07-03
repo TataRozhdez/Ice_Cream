@@ -1,6 +1,7 @@
 import React from "react"
 import './ErrorWindow.scss'
 import Fade from "react-reveal/Fade"
+import ButtonEventPg from "../ButtonEventPg/ButtonEventPg"
 
 export default function ErrorWindow(props) {
   const cls = ["error-window"]
@@ -17,9 +18,10 @@ export default function ErrorWindow(props) {
             Sorry, this service is not yet available for online bookings. Please
             contact us for more information.
           </p>
-          <button className="btn-book-event" onClick={props.onClose}>
-            Got it
-          </button>
+          <ButtonEventPg 
+            onClick={props.onClose}
+            text="Got it"
+          />
         </div>
       </div>
     </Fade>

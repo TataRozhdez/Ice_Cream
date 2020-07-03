@@ -1,6 +1,46 @@
 .IceCreamCart {
   background-color: #FFFFFF;
   .ice-card {
-    background-color: red;
+    background-color: #FFFFFF;
+    height: 100vh;
+    padding: 6vw;
+    a {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #cccccc;
+    }
+    .card-txt {
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 75vw;
+      h2 {
+        font-family: "BelindaRegular";
+        font-size: 4.17vw;
+        margin: .9vw 0 2.042vw;
+        font-weight: 100;
+      }
+      span {
+        font-size: 2.188vw;
+        margin-bottom: 1.2vw;
+      }
+      .describe {
+        text-align: left;
+        margin-top: 4.188vw;
+        width: 50vw;
+        p {
+          font-size: 1.8vw;
+          margin-bottom: 4.042vw;
+        }
+        h3 {
+          font-size: 2.6vw;
+          margin: 20px 0 11px;
+        } 
+      }
+
+    }
   }
 }

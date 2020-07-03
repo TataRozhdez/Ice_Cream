@@ -1,0 +1,19 @@
+@import '../../resources/variables.scss';
+
+.btn-book-event {
+  margin-top: 1.083vw;
+  border: none;
+  cursor: pointer;
+  background-color: $chief-text-color;
+  color: #ffffff;
+  font-size: 26px;
+  padding: 4px 30px;
+  // max-width: 11vw;
+  &:hover {
+    opacity: .4;
+    transition: opacity .3s;
+  }
+  &:active {
+    border: none;
+  }
+}

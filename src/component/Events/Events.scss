@@ -55,22 +55,6 @@
       padding-top: 5px;
     }
   }
-  .btn-book-event {
-    margin-top: 1.083vw;
-    border: none;
-    cursor: pointer;
-    background-color: $chief-text-color;
-    color: #ffffff;
-    font-size: 26px;
-    padding: 4px 30px;
-    &:hover {
-      opacity: .4;
-      transition: opacity .3s;
-    }
-    &:active {
-      border: none;
-    }
-  }
   .paralax-about {
     background: center / cover no-repeat url(../../resources/image/eventRg.png);
     background-attachment: fixed;

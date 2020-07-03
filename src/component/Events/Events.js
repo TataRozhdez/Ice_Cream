@@ -6,6 +6,7 @@ import Footer from "../../containers/Footer/Footer"
 import TextCenterBlock from "../../containers/TextCenterBlock/TextCenterBlock"
 import { Link } from "react-router-dom"
 import ErrorWindow from "../../containers/ErrorWindow/ErrorWindow"
+import ButtonEventPg from "../../containers/ButtonEventPg/ButtonEventPg"
 
 export class Events extends Component {
   state = {
@@ -13,7 +14,6 @@ export class Events extends Component {
   }
 
   toggleErrorMsg = () => {
-    console.log(this.state)
     this.setState({
       errorMsg: !this.state.errorMsg,
     })
@@ -55,12 +55,10 @@ export class Events extends Component {
               </Link>
               <p>4 hr</p>
               <p>$200</p>
-              <button 
-                className="btn-book-event" 
+              <ButtonEventPg 
                 onClick={this.toggleErrorMsg}
-              >
-                BOOK NOW
-              </button>
+                text="BOOK NOW"
+              />
             </div>
           </div>
         </Fade>

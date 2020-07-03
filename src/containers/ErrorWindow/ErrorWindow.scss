@@ -25,27 +25,12 @@
       position: absolute;
       right: 8%;
       opacity: .4;
+      cursor: pointer;
     }
     p {
       font-size: 1.719vw;
       padding: 10px;
       padding: 4.688vw 0 1.04vw;
-    }
-  }
-  .btn-book-event {
-    margin-top: 1.083vw;
-    border: none;
-    cursor: pointer;
-    background-color: $chief-text-color;
-    color: #ffffff;
-    font-size: 26px;
-    padding: 4px 30px;
-    &:hover {
-      opacity: .4;
-      transition: opacity .3s;
-    }
-    &:active {
-      border: none;
     }
   }
 }
