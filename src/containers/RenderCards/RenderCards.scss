@@ -1,3 +1,5 @@
+@import '../../resources/variables.scss';
+
 .RenderCards {
   background-color: #ffffff;
   display: flex;
@@ -7,13 +9,54 @@
   padding: 3.646vw 0;
   h3 {
     font-size: 3vw;
+    @media (max-width: $sm-screen) {
+      font-size: 6vw;
+    }
+  }
+  span {
+    font-size: 2vw;
+    @media (max-width: $sm-screen) {
+      font-size: 4vw;
+    }
   }
   ul {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    grid-gap: 20px;
-    // li {
-    //   width: 200px;
-    // }
+    grid-gap: 2.6vw;
+    list-style: none;
+    @media (max-width: $sm-screen) {
+      grid-template-columns: repeat(2, auto);
+    }
+    @media (max-width: $xs-screen) {
+      grid-template-columns: auto;
+    }
+    li {
+      width: 20.833vw;
+      min-width: 250px;
+      text-align: center;
+      @media (max-width: $xs-screen) {
+        margin-bottom: 15px;
+      }
+      h4 {
+        font-size: 2.2vw;
+        margin-top: 20px;
+        @media (max-width: $sm-screen) {
+          font-size: 3.2vw;
+          margin-top: 10px;
+        }
+        @media (max-width: $xs-screen) {
+          font-size: 5.2vw;
+        }
+      }
+      p {
+        font-size: 1.7vw;
+        @media (max-width: $sm-screen) {
+          font-size: 2.6vw;
+        }
+        @media (max-width: $xs-screen) {
+          font-size: 3.6vw;
+        }
+      }
+    }
   }
 }

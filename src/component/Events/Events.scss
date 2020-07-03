@@ -14,50 +14,85 @@
       padding-top: 7.813vw;
       margin: 0 auto;
       text-align: center;
+      @media (max-width: $sm-screen) {
+        padding: 3vw;
+        width: 90%;
+      }
       h2 {
         font-size: 4.17vw;
+        @media (max-width: $sm-screen) {
+          margin: 4.2vw;
+        }
+        @media (max-width: $xs-screen) {
+          font-size: 9.8vw;
+        }
       }
       span {
         font-family: "BelindaRegular";
         font-size: 2.917vw;
-        margin-bottom: 20px;
+        margin-bottom: 1.042vw;
+        @media (max-width: $xs-screen) {
+          font-size: 7.8vw;
+        }
       }
       p {
         font-size: 1.8vw;
         line-height: 32.6px;
         letter-spacing: 0.01rem;
         margin-top: 2.6vw;
-        margin-bottom: 20px;
+        margin-bottom: 1.042vw;
+        @media (max-width: $sm-screen) {
+          line-height: normal;
+          font-size: 2.8vw;
+        }
+        @media (max-width: $xs-screen) {
+          font-size: 4.8vw;
+        }
       }
     }
-    
   }
   .booking-event {
     background-color: #FEBFB3;
     width: 60vw;
     padding: 2.6vw 0;
     margin: 2.6vw auto;
+
+    @media (max-width: $xs-screen) {
+      width: 90%;
+      padding: 4.6vw 0;
+    }
     a {
       width: 100%;
       cursor: pointer;
       color: $chief-text-color;
       h3 {
-        font-size: 40px;
+        font-size: 2.083vw;
         margin-bottom: .8vw;
         &:hover {
           opacity: .4;
           transition: opacity .3s;
         }
+        @media (max-width: $xs-screen) {
+          font-size: 4.3vw;
+          margin-bottom: 1.8vw;
+        }
       }
     }
     p {
-      font-size: 33px;
+      font-size: 1.719vw;
       padding-top: 5px;
+      @media (max-width: $xs-screen) {
+        font-size: 3.7vw;
+      }
     }
   }
   .paralax-about {
     background: center / cover no-repeat url(../../resources/image/eventRg.png);
     background-attachment: fixed;
     height: 100vh;
+    @media (max-width: $xs-screen) {
+      background-attachment: unset;
+      height: 50vh;
+    }
   }
 }

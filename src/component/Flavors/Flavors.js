@@ -4,6 +4,7 @@ import Fade from "react-reveal/Fade"
 import TextCenterBlock from '../../containers/TextCenterBlock/TextCenterBlock'
 import './Flavors.scss'
 import RenderCards from '../../containers/RenderCards/RenderCards'
+import Footer from '../../containers/Footer/Footer'
 
 import creamImg1 from '../../resources/image/ice_cards/cream_flavors/1.jpg'
 import creamImg2 from '../../resources/image/ice_cards/cream_flavors/2.jpg'
@@ -11,6 +12,13 @@ import creamImg3 from '../../resources/image/ice_cards/cream_flavors/3.jpg'
 import creamImg4 from '../../resources/image/ice_cards/cream_flavors/4.jpg'
 import creamImg5 from '../../resources/image/ice_cards/cream_flavors/5.png'
 import creamImg6 from '../../resources/image/ice_cards/cream_flavors/6.jpg'
+
+import dairyFreeImg1 from '../../resources/image/ice_cards/dairy_free_flavors/1.jpg'
+import dairyFreeImg2 from '../../resources/image/ice_cards/dairy_free_flavors/2.jpg'
+import dairyFreeImg3 from '../../resources/image/ice_cards/dairy_free_flavors/3.jpg'
+import dairyFreeImg4 from '../../resources/image/ice_cards/dairy_free_flavors/4.jpg'
+import dairyFreeImg5 from '../../resources/image/ice_cards/dairy_free_flavors/5.jpg'
+import dairyFreeImg6 from '../../resources/image/ice_cards/dairy_free_flavors/6.jpg'
 
 export default function Flavors() {
   const creamFlavors = [
@@ -35,7 +43,7 @@ export default function Flavors() {
     {
       img: creamImg4,
       name: "CHERRY CHEESECAKE",
-      description: "This is an item on your menu. Give your item a brief description",
+      description: "Fresh tuna tataki, sun gold cherry tomatoes & organic greens",
       price: "$9"
     },
     {
@@ -47,6 +55,45 @@ export default function Flavors() {
     {
       img: creamImg6,
       name: "HAZELNUT & COOKIES",
+      description: "This is an item on your menu. Give your item a brief description",
+      price: "$9"
+    }
+  ]
+
+  const dairyFreeFlavors = [
+    {
+      img: dairyFreeImg1,
+      name: "SALTED CARAMEL SOY",
+      description: "This is an item on your menu. Give your item a brief description",
+      price: "$9"
+    },
+    {
+      img: dairyFreeImg2,
+      name: "BRAMBLEBERRY SORBET",
+      description: "This is an item on your menu. Give your item a brief description",
+      price: "$9"
+    },
+    {
+      img: dairyFreeImg3,
+      name: "BANAN $ HONEY",
+      description: "This is an item on your menu. Give your item a brief description",
+      price: "$9"
+    },
+    {
+      img: dairyFreeImg4,
+      name: "RASPBERRY SORBET",
+      description: "This is an item on your menu. Give your item a brief description",
+      price: "$9"
+    },
+    {
+      img: dairyFreeImg5,
+      name: "STRAWBERRY SORBET",
+      description: "This is an item on your menu. Give your item a brief description",
+      price: "$9"
+    },
+    {
+      img: dairyFreeImg6,
+      name: "LIME SORBET",
       description: "This is an item on your menu. Give your item a brief description",
       price: "$9"
     }
@@ -65,7 +112,12 @@ export default function Flavors() {
           title="ICE CREAM FLAVORS"
           cards={creamFlavors}
         />
+        <RenderCards 
+          title="DAIRY FREE FLAVORS"
+          cards={dairyFreeFlavors}
+        />
       </Fade>
+      <Footer />
     </div>
   )
 }

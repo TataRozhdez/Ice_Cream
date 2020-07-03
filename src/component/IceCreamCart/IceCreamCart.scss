@@ -1,9 +1,14 @@
+@import '../../resources/variables.scss';
+
 .IceCreamCart {
   background-color: #FFFFFF;
   .ice-card {
     background-color: #FFFFFF;
     height: 100vh;
     padding: 6vw;
+    @media (max-width: $xs-screen) {
+      padding: 9vw;
+    }
     a {
       display: flex;
       align-items: center;
@@ -22,10 +27,16 @@
         font-size: 4.17vw;
         margin: .9vw 0 2.042vw;
         font-weight: 100;
+        @media (max-width: $xs-screen) {
+          padding: 4.17vw;
+        }
       }
       span {
         font-size: 2.188vw;
         margin-bottom: 1.2vw;
+        @media (max-width: $xs-screen) {
+          font-size: 3.2vw;
+        }
       }
       .describe {
         text-align: left;
@@ -34,10 +45,16 @@
         p {
           font-size: 1.8vw;
           margin-bottom: 4.042vw;
+          @media (max-width: $xs-screen) {
+            font-size: 3.8vw;
+          }
         }
         h3 {
           font-size: 2.6vw;
           margin: 20px 0 11px;
+          @media (max-width: $xs-screen) {
+            font-size: 4.6vw;
+          }
         } 
       }
 

@@ -6,7 +6,7 @@ export default function RenderCards(props) {
     <li key={index}>
       <img src={i.img} alt={i.name} />
       <h4>{i.name}</h4>
-      <span>_____</span> {/* 5*/}
+      <span>_______________</span> 
       <p>{i.description}</p>
       <h4>{i.price}</h4>
     </li>
@@ -16,7 +16,7 @@ export default function RenderCards(props) {
   return (
     <div className="RenderCards">
       <h3>{props.title}</h3>
-      <span>________</span> {/* 7*/}
+      <span>__________________</span> 
       <ul>
         {card}
       </ul>

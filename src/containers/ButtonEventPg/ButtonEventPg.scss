@@ -6,9 +6,12 @@
   cursor: pointer;
   background-color: $chief-text-color;
   color: #ffffff;
-  font-size: 26px;
+  font-size: 1.354vw;
   padding: 4px 30px;
-  // max-width: 11vw;
+  @media (max-width: $xs-screen) {
+    font-size: 3.1vw;
+    margin-top: 3.8vw;
+  }
   &:hover {
     opacity: .4;
     transition: opacity .3s;

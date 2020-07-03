@@ -1,29 +1,52 @@
+@import '../../resources/variables.scss';
+
 .About {
   background-color: #C3A9D4;
   .aboutTxtFragment {
     background-color: #fff;
-    padding: 3.65vw 28.6vw;
+    padding: 3.65vw;
     text-align: center;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
       font-size: 3.17vw;
+      @media (max-width: $sm-screen) {
+        font-size: 6.17vw;
+      }
     }
     span {
       font-family: "BelindaRegular";
       font-size: 2.917vw;
       margin-bottom: 20px;
+      @media (max-width: $sm-screen) {
+        font-size: 4.9vw;
+      }
     }
     p {
       font-size: 1.4vw;
-      line-height: 32.6px;
+      line-height: 1.7vw;
       letter-spacing: 0.01rem;
-      margin-top: 50px;
-      margin-bottom: 20px;
+      margin-top: 2.6vw;
+      margin-bottom: 1.042vw;
+      width: 46.9vw;
+      @media (max-width: $sm-screen) {
+        font-size: 3.4vw;
+        line-height: 3.7vw;
+        width: 100%;
+      }
     }
   }
   .paralax-about {
     background: center / cover no-repeat url(../../resources/image/aboutImg.png);
     background-attachment: fixed;
     height: 36.5vh;
+    @media (max-width: $sm-screen) {
+      height: 55.5vh;
+    }
+    // @media (max-width: $xs-screen) {
+    //   background-attachment: unset;
+    // }
   }
 }

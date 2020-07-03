@@ -20,17 +20,24 @@
     text-align: center;
     padding: 2.448vw 5.21vw 4.53vw;
     position: relative;
+    @media (max-width: $xs-screen) {
+      width: 80%;
+    }
     span {
       font-size: 2.344vw;
       position: absolute;
       right: 8%;
       opacity: .4;
       cursor: pointer;
+      font-size: 3.719vw;
     }
     p {
       font-size: 1.719vw;
       padding: 10px;
       padding: 4.688vw 0 1.04vw;
+      @media (max-width: $xs-screen) {
+        font-size: 2.9vw;
+      }
     }
   }
 }
