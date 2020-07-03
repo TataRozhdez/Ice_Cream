@@ -11,7 +11,7 @@
     text-align: center;
     .eventTxt {
       width: 50vw;
-      padding-top: 7.813vw;
+      padding-top: 4.3vw;
       margin: 0 auto;
       text-align: center;
       @media (max-width: $sm-screen) {
@@ -90,9 +90,11 @@
     background: center / cover no-repeat url(../../resources/image/eventRg.png);
     background-attachment: fixed;
     height: 100vh;
+    @media (max-width: $sm-screen) {
+      height: 50vh;
+    }
     @media (max-width: $xs-screen) {
       background-attachment: unset;
-      height: 50vh;
     }
   }
 }

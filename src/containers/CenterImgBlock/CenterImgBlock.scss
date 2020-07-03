@@ -10,24 +10,32 @@
   min-height: 100vh;
   z-index: 1;
   transform-style: inherit;
-  overflow: hidden;
+  // overflow: hidden;
+  overflow-x: hidden;
 
   img {
-    max-width: 90vw;
+    max-width: 80vw;
     z-index: 3;
   }
  
   &.icecreame-slide {
     background-color: $home-pg-bck-color;
     img {
-      max-width: 23.438vw;
+      max-width: 22.438vw;
       position: fixed;
-      margin-top: -23vw;
+      margin-top: -22vw;
       margin-left: -12vw;
       @media (max-width: $sm-screen) {
         max-width: 45.3vw;
-        margin-top: -44vw;
-        margin-left: -23vw;
+        width: 33vw;
+        margin-top: -28vw;
+        margin-left: -18vw;
+      }
+      @media (max-width: $xs-screen) {
+        max-width: 57vw;
+        width: 57vw;
+        margin-top: -55vw;
+        margin-left: -28vw;
       }
     } 
     & > .MyButton {
@@ -45,10 +53,12 @@
       position: relative;
       width: 65vw;
       @media (max-width: $sm-screen) {
-        max-width: 90vw;
+        width: 90vw;
+      }
+      @media (max-width: $xs-screen) {
+        width: 83vw;
       }
     }
-
     @media (max-width: $sm-screen) {
       height: 110vh;
       .center-block-text {
@@ -79,13 +89,16 @@
     background-color: #FEBFB3;
     img {
       width: 89vw;
+      @media (max-width: $sm-screen) {
+        max-width: 110vw;
+      }
+      @media (max-width: $xs-screen) {
+        width: 115vw;
+      }
     }
     @media (max-width: $sm-screen) {
       height: 110vh;
       overflow: hidden;
-      img {
-        max-width: 110vw;
-      }
       .center-block-text {
         position: relative;
         .text-line-one {

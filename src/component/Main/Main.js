@@ -9,11 +9,11 @@ import StripyBlock from '../../containers/StripyBlock/StripyBlock'
 import Footer from '../../containers/Footer/Footer'
 
 import Bck1 from '../../resources/image/bck1.png'
-import Bck2 from '../../resources/image/bck2.png'
+import Bck2 from '../../resources/image/bck2_1.png'
 import Bck3 from '../../resources/image/bck3.png'
 import Bck4 from '../../resources/image/bck4.png'
 import Bck5 from '../../resources/image/bck5.png'
-import Bck6 from '../../resources/image/bck6.png'
+import Bck6 from '../../resources/image/bck6.jpg'
 
 export default function Main() {
   return (

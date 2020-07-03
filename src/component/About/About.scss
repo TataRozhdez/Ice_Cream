@@ -41,12 +41,12 @@
   .paralax-about {
     background: center / cover no-repeat url(../../resources/image/aboutImg.png);
     background-attachment: fixed;
-    height: 36.5vh;
+    height: 48.5vh;
     @media (max-width: $sm-screen) {
       height: 55.5vh;
     }
-    // @media (max-width: $xs-screen) {
-    //   background-attachment: unset;
-    // }
+    @media (max-width: $xs-screen) {
+      background-attachment: unset;
+    }
   }
 }

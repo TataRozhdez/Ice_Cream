@@ -9,6 +9,9 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  @media (max-width: $sm-screen) {
+    height: 70vh;
+  }
   .parallax-inner {
     margin: 0;
   }
