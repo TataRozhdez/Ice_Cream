@@ -4,8 +4,12 @@
   display: flex;
   background-color: #ffffff;
   height: 100vh;
+  
   @media (max-width: $sm-screen) {
     height: 200vh;
+  }
+  @media (max-width: $xs-screen) {
+    height: 100vh;
   }
 
   &.left-img {
@@ -26,6 +30,9 @@
     height: 100vh;
     @media (max-width: $sm-screen) {
       width: 100vw;
+    }
+    @media (max-width: $xs-screen) {
+      height: 50vh;
     }
   }
   .side-block-text {

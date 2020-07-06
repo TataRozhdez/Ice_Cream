@@ -5,6 +5,7 @@ import Events from './component/Events/Events'
 import About from './component/About/About'
 import IceCreamCart from './component/IceCreamCart/IceCreamCart'
 import {Route, Switch, Redirect} from 'react-router-dom'
+import SliderInstagram from './containers/SliderInstagram/SliderInstagram'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/book-an-event" component={Events} />
         <Route path="/flavors" component={Flavors} />
         <Route path="/" exact component={Main} />
+        <Route path="/slider" exact component={SliderInstagram} />
         <Redirect to="/" />
       </Switch>
     </div>

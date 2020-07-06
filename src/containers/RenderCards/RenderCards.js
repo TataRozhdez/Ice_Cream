@@ -10,7 +10,6 @@ export default function RenderCards(props) {
       <p>{i.description}</p>
       <h4>{i.price}</h4>
     </li>
-    
   ))
 
   return (

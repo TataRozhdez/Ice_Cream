@@ -10,9 +10,10 @@
   min-height: 100vh;
   z-index: 1;
   transform-style: inherit;
-  // overflow: hidden;
   overflow-x: hidden;
-
+  // @media (max-width: $xs-screen) {
+  //   min-height: 70vh;
+  // }
   img {
     max-width: 80vw;
     z-index: 3;
@@ -72,6 +73,9 @@
           line-height: 2vw;
         }
       }
+    }
+    @media (max-width: $xs-screen) {
+      min-height: 70vh;
     }
     & > .MyButton {
       bottom: 9vw;
