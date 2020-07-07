@@ -1,0 +1,77 @@
+@import '../../resources/variables.scss';
+
+.Auth {
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  span {
+    position: relative;
+    left: 20%;
+    cursor: pointer;
+  }
+  
+  .auth-content {
+    text-align: center;
+    width: 50%;
+    h1 {
+      text-transform: uppercase;
+      font-size: 6vw;
+      margin-bottom: -10px;
+    }
+    .changeForm {
+      margin-bottom: 20px;
+      border: none;
+      background: none;
+      b {
+        color: #BBA45B;
+      }
+    }
+
+    .social-btn {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px 0;
+      border-radius: 3px;
+      &.fb {
+        background-color: #3B5998;
+        border: 1px solid #3B5998;
+        color: #ffffff;
+      }
+      &.google {
+        background-color: #4C8DF4;
+        border: 1px solid #4C8DF4;
+        color: #ffffff;
+      }
+      &.em {
+        background-color: #ffffff;
+        border: 1px solid $chief-text-color;
+      }
+    }
+    hr {
+      overflow: visible; /* For IE */
+      padding: 0;
+      border: none;
+      border-top: 1px solid $chief-text-color;
+      text-align: center;
+    }
+    hr:after {
+        content: "or";
+        display: inline-block;
+        position: relative;
+        top: -0.6rem;
+        font-size: 1rem;
+        padding: 0 0.25rem;
+        background: #ffffff;
+    }
+  }
+}

@@ -111,7 +111,7 @@ export default class Footer extends Component {
             placeholder="Enter your email here*"
             value={formControls.value}
             onChange={event => this.onChangeHandler(event)}
-            valid={formControls.valid}            
+            valid={formControls.valid || undefined}            
           /> 
           <br />
           <button

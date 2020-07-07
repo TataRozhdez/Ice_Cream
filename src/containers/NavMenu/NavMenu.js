@@ -7,6 +7,7 @@ import instagram from '../../resources/image/icons/instagram.svg'
 import twitter from '../../resources/image/icons/twitter.svg'
 import foursquare from '../../resources/image/icons/foursquare.png'
 import Backdrop from '../Backdrop/Backdrop'
+import Auth from '../Auth/Auth'
 
 const renderLinks = (links) => {
   return links.map((link, index) => {
@@ -43,6 +44,7 @@ const renderIcons = (icons) => {
 export class NavMenu extends Component {
   state = {
     menu: false,
+    loginWindow: false,
     links: [
       {to: '/', label: 'Home', exact: true},
       {to: '/flavors', label: 'Flavors', exact: false},
@@ -69,6 +71,12 @@ export class NavMenu extends Component {
     })
   }
 
+  openLoginWindow = () => {
+    this.setState({
+      loginWindow: !this.state.loginWindow
+    })
+  }
+
   render() {
     const cls = [
       'NavMenu'
@@ -89,7 +97,10 @@ export class NavMenu extends Component {
             <Link to="/">Gelato</Link>
           </div>
           <nav className="social-links">
-            <button className="login">
+            <button 
+              className="login"
+              onClick={this.openLoginWindow}
+            >
               <div>
                 <img
                   src={userSvg}
@@ -108,6 +119,7 @@ export class NavMenu extends Component {
           </div>
         </div>
         {this.state.menu ? <Backdrop onClick={this.menuCloseHandler}/> : null}
+        {this.state.loginWindow ? <Auth onClose={this.openLoginWindow} /> : null}
       </React.Fragment>
     )
   }

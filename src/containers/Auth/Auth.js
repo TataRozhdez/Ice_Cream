@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Auth.scss'
 
 export default class Auth extends Component {
   state = {
@@ -17,18 +18,23 @@ export default class Auth extends Component {
   renderForm(text, title) {
     return (
       <div className="auth-content">
-        <h3>{title}</h3>
-        <p>{text}
-          <button
-            className="changeForm"
-          >            
-            {title}
-          </button>
-        </p>
-        <button>{title} with Facebook</button>
-        <button>{title} with Facebook</button>
+        <h1>{title}</h1>
+        <button
+          className="changeForm"
+        >   
+          {text}&nbsp;         
+          <b>{title}</b>
+        </button>
+        <button
+          className="social-btn fb"
+        >{title} with Facebook</button>
+        <button
+          className="social-btn google"
+        >{title} with Google</button>
         <hr />
-        <button>{title} with email</button>
+        <button
+          className="social-btn em"
+        >{title} with email</button>
       </div>
     )
   }
@@ -36,7 +42,7 @@ export default class Auth extends Component {
   render() {  
     return (
       <div className="Auth">
-        <span>&#10005;</span>
+        <span onClick={this.props.onClose}>&#10005;</span>
         {
           this.state.signUp.visible
           ? this.renderForm(this.state.signUp.text, this.state.signUp.title)
