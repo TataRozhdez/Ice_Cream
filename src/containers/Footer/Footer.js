@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.scss'
+import is from 'is_js'
 
 import InstaLogo from '../../resources/image/icons/inst_foot.svg'
 import FacebookLogo from '../../resources/image/icons/facebook_foot.svg'
@@ -17,17 +18,9 @@ export default class Footer extends Component {
       {to: '#', label: InstaLogo, alt: 'Instagram'}
     ],
     formControls: {
-      email: {
-        value: '',
-        type: 'email',
-        errorMessage: 'Enter the correct email',
-        valid: false,
-        touched: false,
-        validation: {
-          required: true,
-          email: true
-        }
-      }
+      value: '',
+      valid: false,
+      btnTouch: false
     }
   }
 
@@ -45,24 +38,46 @@ export default class Footer extends Component {
     })
   }
 
-  loginHandler = () => {
-
-  }
-
   submitHandler = event => {
     event.preventDefault() 
   }
 
-  onChangeHandler = event => {
-    console.log(event.target.value)
- 
-    const control = {...this.state.formControls.email}
+  loginHandler = () => {
+    const login = {...this.state.formControls}
+    const validation = is.email(login.value)
+    login.btnTouch = true
+
+    if (validation) {
+      console.log('Submit')
+
+      login.valid = true
+      login.value = ''
+    } else {
+      login.valid = false
+    }
+        
+    return this.setState({
+      formControls: login
+    }) 
+  }
+
+  onChangeHandler = event => { 
+    const control = {...this.state.formControls}
     control.value = event.target.value
-    control.touched = true
-    control.valid = this.validateControl(control.value, control.validation)
+
+    this.setState({
+      formControls: control
+    })
   }
 
   render() {  
+    const formControls = this.state.formControls
+    const clsInput = []
+
+    if (!formControls.valid && formControls.btnTouch) {
+      clsInput.push('invalid')
+    }
+    
     return (
       <div className="Footer">
         <div className="foot-txt">
@@ -90,16 +105,15 @@ export default class Footer extends Component {
         <form onSubmit={this.submitHandler}>
           <h2>MAILING LIST</h2>
           <input 
+            className={clsInput.join(' ')}
             type="email"
             id="emailInput"
             placeholder="Enter your email here*"
-            value={this.state.formControls.email.value}
-            valid={this.state.formControls.email.valid}
-            touched={this.state.formControls.email.touched}
-            errorMessage={this.state.formControls.email.errorMessage}
-            shouldValidate={!!this.state.formControls.email.validation}
+            value={formControls.value}
             onChange={event => this.onChangeHandler(event)}
-          /> <br />
+            valid={formControls.valid}            
+          /> 
+          <br />
           <button
             onClick={this.loginHandler}
           >SUBSCRIBE</button>

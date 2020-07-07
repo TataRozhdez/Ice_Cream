@@ -76,6 +76,9 @@
       border: 5px solid #E8E8E8;
       padding: 1px 21px;
     }
+    &.invalid {
+      border: 5px solid #ff0404;
+    }
     @media (max-width: $sm-screen) {
       font-size: 3.1vw;
     }
